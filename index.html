@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ADAPT BTC | Home</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="main.js"></script>
+    <script defer src="home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.1"></script>
+  </head>
+  <body data-page="home">
+    <header class="site-header">
+      <div class="ticker" aria-live="polite">
+        <span class="ticker__label">Live BTC/USD</span>
+        <span class="ticker__price" id="btc-price">Loading...</span>
+        <span class="ticker__change" id="btc-change"></span>
+        <span class="ticker__time" id="btc-updated"></span>
+      </div>
+      <div class="nav-bar">
+        <a class="logo" href="index.html">
+          <img src="assets/adaptbtc-logo.svg" alt="ADAPT BTC logo" />
+        </a>
+        <nav class="nav-links">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="tools.html">Tools</a>
+          <a href="consulting.html">Consulting</a>
+          <a href="get-involved.html">Get Involved</a>
+          <a href="learning.html">Learning</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">ADAPT BTC · Open Bitcoin Intelligence</p>
+          <h1>Build with Bitcoin conviction.</h1>
+          <p>
+            ADAPT BTC is a community-led research and tooling hub dedicated to helping
+            individuals and institutions understand, adopt, and build on the Bitcoin
+            standard. We translate on-chain truth into actionable guidance for builders,
+            investors, and educators.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="get-involved.html">Join the Network</a>
+            <a class="button button--ghost" href="tools.html">Explore Tools</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>Live Network Snapshot</h2>
+          <ul>
+            <li><strong>2009 → Now:</strong> Continuous BTC/USD pricing history.</li>
+            <li><strong>Research:</strong> Weekly macro briefs and market structure notes.</li>
+            <li><strong>Builders:</strong> APIs, dashboards, and automations for teams.</li>
+          </ul>
+          <p>
+            Use the interactive price map below to zoom in on any epoch, highlight
+            market cycles, and export the data for your own modeling.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Bitcoin Price Map (2009 → Now)</h2>
+          <p>
+            Scroll or pinch to zoom, drag to pan, and hover for precise BTC/USD values.
+            This map is powered by live pricing history from the Bitcoin network.
+          </p>
+        </div>
+        <div class="chart-card">
+          <canvas id="btc-chart" aria-label="Bitcoin price chart" role="img"></canvas>
+          <div class="chart-tools">
+            <button class="button button--ghost" id="reset-zoom">Reset zoom</button>
+            <span class="chart-hint">Tip: Use your scroll wheel or trackpad to zoom.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section grid">
+        <article>
+          <h3>Mission</h3>
+          <p>
+            We help people adapt to the Bitcoin standard through open-source tools,
+            independent research, and hands-on advisory. Our mission is to compress the
+            learning curve for builders and long-term allocators.
+          </p>
+        </article>
+        <article>
+          <h3>What we ship</h3>
+          <ul>
+            <li>Real-time dashboards and alerting infrastructure.</li>
+            <li>Portfolio stress-testing and liquidity simulations.</li>
+            <li>Education programs and field guides for teams.</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Why it matters</h3>
+          <p>
+            Bitcoin is a generational technology. ADAPT BTC helps enterprises and
+            communities build the muscle memory to operate in a world of open monetary
+            systems.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <img src="assets/adaptbtc-logo.svg" alt="ADAPT BTC" />
+        <p>Open, resilient, and ready for the Bitcoin era.</p>
+      </div>
+      <div class="footer-links">
+        <a href="tools.html">Tools</a>
+        <a href="consulting.html">Consulting</a>
+        <a href="get-involved.html">Get Involved</a>
+        <a href="learning.html">Learning</a>
+      </div>
+    </footer>
+  </body>
+</html>
